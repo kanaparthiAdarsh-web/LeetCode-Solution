@@ -1,18 +1,20 @@
 /*
  * AnyPush — AI explanation
- * This solution employs a two-pointer sliding window approach, with the right endpoint `r` iterating backwards from `n-1`. For each `r`, the left endpoint `l` is expanded leftwards as much as possible while keeping the subarray `nums[r...l]`'s transformation cost within `k`. The optimal cost to make a subarray `nums[r...l]` non-decreasing is `sum(max(nums[r], ..., nums[i]) - nums[i])` over `i` from `r` to `l`. A monotonic deque efficiently maintains the `sum(max(nums[r], ..., nums[i]))` term, allowing amortized O(1) updates as the window slides.
+ * This solution employs a two-pointer sliding window with 'r' moving backwards from n-1. For each 'r', 'l' expands leftwards to find the largest valid window satisfying the cost constraint 'k'. The transformation cost for nums[r...l] is sum(max(nums[r...i])) - sum(nums[r...l]) over i in [r, l].
  *
- * Time Complexity: O(N), Space Complexity: O(N). Both pointers traverse the array once, and each element enters/leaves the deque at most once.
- * This approach is essential for `N=10^5` as a naive `O(N^2)` solution (checking all subarrays) would time out. The monotonic deque specifically optimizes calculating the sum of transformed elements within the sliding window to `O(1)` amortized time per window adjustment.
- * A naive `O(N^2)` or `O(N^3)` approach without the deque would repeatedly calculate prefix maximums or sums, which is prohibitively slow.
+ * Earlier ideas might have led to O(N^2) by recomputing range maximums, or O(N log N) with data structures like segment trees. This version significantly improves by leveraging a monotonic deque to compute the sum of max(nums[r...i]) terms in amortized O(1) time. Prefix sums handle the sum(nums[r...l]) component.
+ *
+ * Time Complexity: O(N) because each pointer ('r', 'l') and deque operation processes elements at most a constant number of times.
+ * Space Complexity: O(N) for the prefix sums and the deque.
+ *
+ * This O(N) approach is optimal and clean, using the deque to efficiently manage maximums within the window. While the deque's logic can be intricate, its amortized constant-time updates are indispensable for achieving this performance.
  */
 
 long long countNonDecreasingSubarrays(int* nums, int numsSize, int k) {
     int n = numsSize;
     long long* pre = (long long*)malloc(sizeof(long long) * (n + 1));
     pre[0] = 0;
-    for (int i = 0; i < n; i++) 
-        pre[i + 1] = pre[i] + nums[i];
+    for (int i = 0; i < n; pre[i + 1] = pre[i] + nums[i],i++);
 
     int* dq = (int*)malloc(sizeof(int) * (n + 1));
     int lo = n, hi = n;
@@ -33,10 +35,10 @@ long long countNonDecreasingSubarrays(int* nums, int numsSize, int k) {
 
         while (total - (pre[l + 1] - pre[r]) > k) {
             total -= nums[dq[hi - 1]];
-            if (dq[hi - 1] == l) hi--;
+            if (dq[hi - 1] == l) 
+                hi--;
             l--;
         }
-
         ans += l - r + 1;
     }
 

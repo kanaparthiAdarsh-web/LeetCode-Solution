@@ -1,27 +1,19 @@
 /*
  * AnyPush — AI explanation
- * This solution efficiently counts subarrays with odd sums in a single pass using prefix sum parities. The core idea is that a subarray `arr[i...j]` has an odd sum if and only if `prefixSum[j]` and `prefixSum[i-1]` have different parities. We track counts of odd and even prefix sums encountered so far, incrementing `totalOdds` based on these counts at each step.
+ * This solution efficiently counts subarrays with odd sums in a single pass using prefix sum parities. The core idea is that a subarray `arr[i...j]` has an odd sum if `prefixSum[j]` and `prefixSum[i-1]` have different parities. We track counts of odd and even prefix sums encountered, updating our total based on current prefix sum parity and previous counts.
  *
- * Time: O(N) - A single pass through the array.
- * Space: O(1) - Only a few constant variables are maintained.
- *
- * This approach vastly improves upon earlier, less efficient ideas like an O(N^2) brute-force, which would check every possible subarray sum. That brute-force would be too slow for typical constraints (e.g., N=10^5). By leveraging parity properties, we achieve optimal time complexity, making the solution practical. One minor note could be slightly more compact ternary logic for updating `totalOdds` and `oddCount`/`evenCount`, but the current if/else maintains excellent readability.
+ * This approach yields O(N) time by a single array scan and O(1) space complexity by using only a few variables. It vastly outperforms a naive O(N^2) brute-force, which would check every subarray explicitly. Our journey started with v1, establishing the core logic with standard `if/else`. v2 condensed this to single-line `if/else`. This current version further refines the assignment logic using a ternary operator, showcasing compact C while retaining readability for experienced eyes.
  */
 
 #include <stdio.h>
 
 int numOfSubarrays(int* arr, int arrSize) {
     long long oddCount = 0, evenCount = 1;
-    long long currentSum = 0;
-    long long totalOdds = 0;
-    long long mod = 1000000007;
+    long long currentSum = 0,totalOdds = 0,mod = 1000000007;
 
     for (int i = 0; i < arrSize; i++) {
         currentSum += arr[i];
-        if (currentSum % 2 != 0)
-            totalOdds = (totalOdds + evenCount) % mod,oddCount++;
-        else
-            totalOdds = (totalOdds + oddCount) % mod,evenCount++;
+        (currentSum % 2 != 0)? (totalOdds = (totalOdds + evenCount) % mod,oddCount++):(totalOdds = (totalOdds + oddCount) % mod,evenCount++);
     }
 
     return (int)totalOdds;

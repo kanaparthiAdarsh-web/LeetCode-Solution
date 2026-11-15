@@ -35,12 +35,14 @@
 > 1 <= arr.length <= 105
 > 1 <= arr[i] <= 100
 
-AnyPush tracked this solution across **2 steps**.
+AnyPush tracked this solution across **3 steps**.
 
 ## Journey
 1. **Step 1 · first solve** _(2026-11-15)_ — `v1.c`  
    This solution efficiently counts subarrays with odd sums in a single pass using prefix sum parities.
 2. **Step 2 · improved** _(2026-11-15)_ — `v2.c`  
+   This solution efficiently counts subarrays with odd sums in a single pass using prefix sum parities. The core idea is that a subarray `arr[i...j]` has an odd su
+3. **Step 3 · improved** _(2026-11-15)_ — `v3.c`  
    This solution efficiently counts subarrays with odd sums in a single pass using prefix sum parities. The core idea is that a subarray `arr[i...j]` has an odd su
 
 ## Current solution

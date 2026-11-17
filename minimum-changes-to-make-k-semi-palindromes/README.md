@@ -65,7 +65,7 @@
 > 1 <= k <= s.length / 2
 > s contains only lowercase English letters.
 
-AnyPush tracked this solution across **3 steps**.
+AnyPush tracked this solution across **4 steps**.
 
 ## Journey
 1. **Step 1 · first solve** _(2026-11-17)_ — `v1.c`  
@@ -74,6 +74,8 @@ AnyPush tracked this solution across **3 steps**.
    This solution implements a two-phase dynamic programming strategy.
 3. **Step 3 · improved** _(2026-11-17)_ — `v3.c`  
    This solution employs a two-phase dynamic programming approach to efficiently solve the problem.
+4. **Step 4 · improved** _(2026-11-17)_ — `v4.c`  
+   This solution effectively employs a two-phase dynamic programming strategy. The first crucial step, honed from initial attempts, involves precomputing `cost[i][
 
 ## Current solution
 See [`solution.c`](./solution.c).

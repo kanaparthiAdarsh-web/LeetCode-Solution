@@ -65,13 +65,15 @@
 > 1 <= k <= s.length / 2
 > s contains only lowercase English letters.
 
-AnyPush tracked this solution across **2 steps**.
+AnyPush tracked this solution across **3 steps**.
 
 ## Journey
 1. **Step 1 · first solve** _(2026-11-17)_ — `v1.c`  
    (AnyPush: AI explanation unavailable — Gemini error 503: {
 2. **Step 2 · improved** _(2026-11-17)_ — `v2.c`  
    This solution implements a two-phase dynamic programming strategy.
+3. **Step 3 · improved** _(2026-11-17)_ — `v3.c`  
+   This solution employs a two-phase dynamic programming approach to efficiently solve the problem.
 
 ## Current solution
 See [`solution.c`](./solution.c).

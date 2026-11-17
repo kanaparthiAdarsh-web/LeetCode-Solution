@@ -68,14 +68,16 @@
 AnyPush tracked this solution across **4 steps**.
 
 ## Journey
-1. **Step 1 · first solve** _(2026-11-17)_ — `v1.c`  
+1. **Step 1 · first solve** _(2026-11-17)_  
    (AnyPush: AI explanation unavailable — Gemini error 503: {
-2. **Step 2 · improved** _(2026-11-17)_ — `v2.c`  
+2. **Step 2 · improved** _(2026-11-17)_  
    This solution implements a two-phase dynamic programming strategy.
-3. **Step 3 · improved** _(2026-11-17)_ — `v3.c`  
+3. **Step 3 · improved** _(2026-11-17)_  
    This solution employs a two-phase dynamic programming approach to efficiently solve the problem.
-4. **Step 4 · improved** _(2026-11-17)_ — `v4.c`  
+4. **Step 4 · improved** _(2026-11-17)_  
    This solution effectively employs a two-phase dynamic programming strategy. The first crucial step, honed from initial attempts, involves precomputing `cost[i][
+
+> ✅ **Merged** — the per-step files were collapsed into `solution.c`. The journey above is the kept record.
 
 ## Current solution
 See [`solution.c`](./solution.c).

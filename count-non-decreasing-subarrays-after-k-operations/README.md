@@ -44,10 +44,12 @@
 AnyPush tracked this solution across **2 steps**.
 
 ## Journey
-1. **Step 1 · first solve** _(2026-11-13)_ — `v1.c`  
+1. **Step 1 · first solve** _(2026-11-13)_  
    This solution employs a two-pointer sliding window approach, with the right endpoint `r` iterating backwards from `n-1`. For each `r`, the left endpoint `l` is 
-2. **Step 2 · improved** _(2026-11-13)_ — `v2.c`  
+2. **Step 2 · improved** _(2026-11-13)_  
    This solution employs a two-pointer sliding window with 'r' moving backwards from n-1. For each 'r', 'l' expands leftwards to find the largest valid window sati
+
+> ✅ **Merged** — the per-step files were collapsed into `solution.c`. The journey above is the kept record.
 
 ## Current solution
 See [`solution.c`](./solution.c).

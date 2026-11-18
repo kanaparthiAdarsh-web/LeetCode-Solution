@@ -47,8 +47,10 @@
 AnyPush tracked this solution across **1 step**.
 
 ## Journey
-1. **Step 1 · first solve** _(2026-11-18)_ — `v1.c`  
+1. **Step 1 · first solve** _(2026-11-18)_  
    The core idea is a greedy approach. We iterate through the string, considering non-overlapping pairs of characters (s[0], s[1]), (s[2], s[3]), and so on. For ea
+
+> ✅ **Merged** — the per-step files were collapsed into `solution.c`. The journey above is the kept record.
 
 ## Current solution
 See [`solution.c`](./solution.c).

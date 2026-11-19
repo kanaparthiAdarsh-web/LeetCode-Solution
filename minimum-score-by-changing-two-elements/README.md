@@ -45,8 +45,10 @@
 AnyPush tracked this solution across **1 step**.
 
 ## Journey
-1. **Step 1 · first solve** _(2026-11-19)_ — `v1.c`  
+1. **Step 1 · first solve** _(2026-11-19)_  
    This solution begins by sorting the input array, which is crucial for identifying the smallest and largest elements efficiently. Once sorted, the problem of min
+
+> ✅ **Merged** — the per-step files were collapsed into `solution.c`. The journey above is the kept record.
 
 ## Current solution
 See [`solution.c`](./solution.c).

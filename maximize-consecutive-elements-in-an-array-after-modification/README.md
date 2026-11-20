@@ -35,8 +35,10 @@
 AnyPush tracked this solution across **1 step**.
 
 ## Journey
-1. **Step 1 · first solve** _(2026-11-20)_ — `v1.c`  
+1. **Step 1 · first solve** _(2026-11-20)_  
    This solution uses dynamic programming after sorting the input array. `dp[k]` stores the maximum length of a consecutive sequence that can be formed ending with
+
+> ✅ **Merged** — the per-step files were collapsed into `solution.c`. The journey above is the kept record.
 
 ## Current solution
 See [`solution.c`](./solution.c).

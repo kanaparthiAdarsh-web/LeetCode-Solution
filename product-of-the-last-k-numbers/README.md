@@ -50,8 +50,10 @@
 AnyPush tracked this solution across **1 step**.
 
 ## Journey
-1. **Step 1 · first solve** _(2026-11-23)_ — `v1.c`  
+1. **Step 1 · first solve** _(2026-11-23)_  
    This solution uses a prefix product array to efficiently calculate the product of the last K numbers. Each `prefix[i]` stores the product of all numbers added u
+
+> ✅ **Merged** — the per-step files were collapsed into `solution.c`. The journey above is the kept record.
 
 ## Current solution
 See [`solution.c`](./solution.c).

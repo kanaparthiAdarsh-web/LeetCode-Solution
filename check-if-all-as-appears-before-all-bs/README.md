@@ -38,8 +38,10 @@
 AnyPush tracked this solution across **1 step**.
 
 ## Journey
-1. **Step 1 · first solve** _(2026-11-22)_ — `v1.c`  
+1. **Step 1 · first solve** _(2026-11-22)_  
    This solution iterates through the string in a single pass, tracking whether a 'b' has been encountered yet. It uses a `seenB` flag; once set to true, any subse
+
+> ✅ **Merged** — the per-step files were collapsed into `solution.c`. The journey above is the kept record.
 
 ## Current solution
 See [`solution.c`](./solution.c).

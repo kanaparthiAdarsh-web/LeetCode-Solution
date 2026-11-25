@@ -49,8 +49,10 @@
 AnyPush tracked this solution across **1 step**.
 
 ## Journey
-1. **Step 1 · first solve** _(2026-11-24)_ — `v1.c`  
+1. **Step 1 · first solve** _(2026-11-24)_  
    This solution employs a brute-force approach, iterating through all possible subarrays using nested loops (O(N^2)). For each subarray, we incrementally calculat
+
+> ✅ **Merged** — the per-step files were collapsed into `solution.c`. The journey above is the kept record.
 
 ## Current solution
 See [`solution.c`](./solution.c).

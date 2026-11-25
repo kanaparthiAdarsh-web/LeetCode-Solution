@@ -70,11 +70,13 @@
 > 1 <= nums.length <= 105
 > 1 <= nums[i] <= 105
 
-AnyPush tracked this solution across **1 step**.
+AnyPush tracked this solution across **2 steps**.
 
 ## Journey
 1. **Step 1 · first solve** _(2026-11-25)_ — `v1.c`  
    This solution determines the minimum length L such that all substrings of length L in the input array are unique (i.e., appear exactly once).
+2. **Step 2 · improved** _(2026-11-25)_ — `v2.c`  
+   This solution finds the length of the smallest unique subarray by leveraging suffix arrays and Longest Common Prefix (LCP) array construction. We build a suffix
 
 ## Current solution
 See [`solution.c`](./solution.c).

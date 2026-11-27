@@ -53,8 +53,10 @@
 AnyPush tracked this solution across **1 step**.
 
 ## Journey
-1. **Step 1 · first solve** _(2026-11-27)_ — `v1.c`  
+1. **Step 1 · first solve** _(2026-11-27)_  
    This solution combines pre-computation and dynamic programming.
+
+> ✅ **Merged** — the per-step files were collapsed into `solution.c`. The journey above is the kept record.
 
 ## Current solution
 See [`solution.c`](./solution.c).

@@ -57,8 +57,10 @@
 AnyPush tracked this solution across **1 step**.
 
 ## Journey
-1. **Step 1 · first solve** _(2026-11-28)_ — `v1.c`  
+1. **Step 1 · first solve** _(2026-11-28)_  
    This solution addresses a unique "buy one, get one free" problem variant. It first precomputes `freq[T]` (count of items of type T) and `multCount[T]` (sum of f
+
+> ✅ **Merged** — the per-step files were collapsed into `solution.c`. The journey above is the kept record.
 
 ## Current solution
 See [`solution.c`](./solution.c).
